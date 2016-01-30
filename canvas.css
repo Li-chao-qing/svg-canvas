@@ -1,0 +1,78 @@
+.container{
+    padding: 0 100px;
+    padding-top: 50px;
+    width: 800px;
+    height: auto;
+    margin:0 auto;
+    background: url(canbg.png) no-repeat center -150px;
+    background-size: 100% auto;
+}
+/*#2E5009*/
+.menu{
+    top:23px;
+    background: #C1D1B1;
+    color: #2E5009;
+    width: 100%;height:30px;text-align: center;
+    line-height: 30px;position: relative;z-index: 2;
+    cursor: pointer;
+    /*color:#fff;*/
+}
+.menu .parent{
+    width: 12.5%;height:100% ;
+    float: left;
+}
+ul,li,body{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu .parent>div{
+    width:100% ;height: 100%;
+}
+
+.menu .parent .son{
+    width:100% ;
+}
+.box{
+    width:100% ;height: 600px;
+    position: relative;
+}
+.box .copy{
+    width: 100%;height: 100%;
+    position: absolute;left: 0;top:0;z-index: 1;
+}
+.box canvas{
+    position: absolute;left: 0;top:0;
+
+}
+.son{
+    display: none;
+    background: #aaa;
+}
+.son li{
+    background: #9AB97B;
+    color: #000;
+    transition: all 1s ease;
+}
+.son li:hover{
+    background: #C1D1B1;
+    color:#000;
+}
+.xp{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 0;top:0;
+    background: #955E50;
+    display: none;
+    /*z-index: 20;*/
+}
+.selectarea{
+    width: 100px;height: 100px;
+    border:1px dotted #000;
+    position: absolute;
+    left: 0;
+    top:0;
+    display: none;
+
+}

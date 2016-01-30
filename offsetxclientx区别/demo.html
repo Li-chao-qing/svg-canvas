@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width:400px;
+        height:400px;
+        border: 1px solid red;
+        margin-left: 100px;
+        padding-left: 50px;
+    }
+</style>
+<script>
+    window.onload=function(){
+
+
+
+        var div=document.getElementsByTagName('div')[0];
+        console.dir(div.offsetLeft)
+        console.dir(document.documentElement)
+//        console.log(div.clientWidth)
+//        console.dir(div);
+//        console.log(div.offsetWidth);
+        document.body.onclick=function(e){
+            console.log(e);
+        }
+    }
+</script>
+<body>
+<body>
+<a name="A0" id="A0"></a>
+<a href="#A1">网页第一部分</a>
+<a href="#A2">网页第二部分</a>
+<div style="height:900px; background:#CCCCCC"></div>
+<a name="A1" ></a>1<a href="#A0">返回顶部</a>
+<div style="height:900px; background:#999999"></div>
+<a name="A2" id="A2"></a>2<a href="#A0">返回顶部</a>
+<div style="height:900px; background:#666666"></div>
+</body>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    canvas{
+        background: #ccc;
+        /*width: 100%;*/
+        /*height: 100%;*/
+    }
+</style>
+<script>
+//    window.onload=function(){
+//        var canvas=document.getElementsByTagName('canvas')[0];
+//        var cobj=canvas.getContext('2d');
+//        document.onmousedown=function(e){
+//            cobj.beginPath();
+//            cobj.moveTo(e.clientX,e.clientY);
+//
+//
+//            document.onmousemove=function(e){
+//                cobj.lineTo(e.clientX,e.clientY);
+//
+//                cobj.stroke();
+//            }
+//        }
+//        document.onmouseup=function(){
+//            document.onmousemove=function(e){
+//                cobj.closePath();
+//            }
+//        }
+//    };
+
+
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+//    document.onmousedown=function(e){
+//        cobj.beginPath();
+//        cobj.moveTo(e.clientX,e.clientY);
+//        cobj.lineTo(e.clientX,e.clientY);
+//
+//        document.onmousemove=function(e){
+//            cobj.lineTo(e.clientX,e.clientY);
+//
+//
+//            cobj.closePath();
+//        }
+//    }
+//    document.onmouseup=function(e){
+//
+//        document.onmousemove=function(e){
+////            cobj.lineTo(e.clientX,e.clientY);
+//cobj.stroke();
+////            cobj.stroke();
+//            cobj.closePath();
+//        }
+//    }
+//};
+
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+//    document.onmousedown=function(e){
+//        cobj.beginPath();
+//        cobj.moveTo(e.clientX,e.clientY);
+//        cobj.lineTo(e.clientX,e.clientY);
+////        cobj.closePath();
+//        document.onmousemove=function(e){
+////            cobj.moveTo(e.clientX,e.clientY);
+//            cobj.lineTo(e.clientX,e.clientY);
+////            cobj.clearRect(0,0,e.clientX,e.clientY);
+//
+//            cobj.closePath();
+//        }
+//    }
+//    document.onmouseup=function(e){
+//
+//        document.onmousemove=function(e){
+////            cobj.lineTo(e.clientX,e.clientY);
+////            cobj.stroke();
+//            cobj.stroke();
+//            cobj.closePath();
+//        }
+//    }
+//};
+
+
+
+
+
+
+
+
+
+////////////////////画直线
+
+
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+//    var arr=[];
+//    canvas.onmousedown=function(e){
+//        var startx= e.offsetX;
+//        var starty= e.offsetY;
+//        canvas.onmousemove=function(e){
+//            cobj.clearRect(0,0,canvas.width,canvas.height);
+//            if(arr.length!=0){
+//                cobj.putImageData(arr[arr.length-1],0,0);
+//            }
+//            var endx= e.offsetX;
+//            var endy= e.offsetY;
+//            cobj.beginPath();
+//            cobj.moveTo(startx,starty);
+//            cobj.lineTo(endx,endy);
+//            cobj.stroke();
+//            cobj.closePath();
+//        }
+//        canvas.onmouseup=function(e){
+//            arr.push(cobj.getImageData(0,0,canvas.width,canvas.height));
+//            canvas.onmousemove=null;
+//            canvas.onmouseup=null
+//            console.log(arr);
+//        }
+//    }
+//    var btn=document.getElementsByTagName('button')[0];
+//    btn.onclick=function(){
+////        alert(1);
+//
+//        var last=arr.pop();
+//        cobj.clearRect(0,0,canvas.width,canvas.height);
+//        cobj.putImageData(last,0,0);
+//        cobj.clearRect(0,0,canvas.width,canvas.height);
+//        if(arr.length!=0){
+//            cobj.putImageData(arr[arr.length-1],0,0);
+//        }
+//
+//    }
+//
+//};
+//////////铅笔
+
+window.onload=function(){
+    var canvas=document.getElementsByTagName('canvas')[0];
+    var cobj=canvas.getContext('2d');
+    canvas.onmousedown=function(e){
+        var startx= e.offsetX;
+        var starty= e.offsetY;
+        cobj.beginPath();
+        cobj.moveTo(startx,starty);
+        canvas.onmousemove=function(e){
+
+            var endx= e.offsetX;
+            var endy= e.offsetY;
+
+            cobj.lineTo(endx,endy);
+            cobj.stroke();
+
+        }
+        canvas.onmouseup=function(e){
+            cobj.closePath();
+            canvas.onmousemove=null;
+            canvas.onmouseup=null
+
+        }
+    }
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+//
+//
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+//    document.onmousedown=function(e){
+//        cobj.beginPath();
+//        cobj.moveTo(e.clientX,e.clientY);
+//        cobj.lineTo(e.clientX,e.clientY);
+//
+//        document.onmousemove=function(e){
+//            cobj.lineTo(e.clientX,e.clientY);
+//
+//
+//            cobj.closePath();
+//        }
+//    }
+//    document.onmouseup=function(e){
+//
+//        document.onmousemove=function(e){
+////            cobj.lineTo(e.clientX,e.clientY);
+//cobj.stroke();
+////            cobj.stroke();
+//            cobj.closePath();
+//        }
+//    }
+//};
+
+
+
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+//    canvas.onmousedown=function(e){
+//        cobj.beginPath();
+//        cobj.moveTo(e.offsetX,e.offsetX);
+////        cobj.lineTo(e.clientX,e.clientY);
+////        cobj.closePath();
+//        canvas.onmousemove=function(e){
+////            cobj.moveTo(e.clientX,e.clientY);
+//            cobj.lineTo(e.offsetX,e.offsetX);
+////            cobj.clearRect(0,0,e.clientX,e.clientY);
+//            cobj.stroke();
+////            cobj.closePath();
+//        }
+//    }
+//    document.onmouseup=function(e){
+//        cobj.closePath();
+//        document.onmousemove=null;
+//    }
+//};
+//window.onload=function(){
+//    var canvas=document.getElementsByTagName('canvas')[0];
+//    var cobj=canvas.getContext('2d');
+////    cobj.strokeStyle='red';
+////    cobj.strokeRect(0,0,100,100)
+////    cobj.strokeRect(0,0,100,100)
+////var arr=[];
+//    cobj.strokeRect(0,0,100,100)
+////    var obj={x:0,y:0,w:100px,h:100px}
+////arr.push(obj);
+//
+//var data=cobj.getImageData(0,0,200,200)
+//    cobj.putImageData(data,100,100);
+//console.log(data.length);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//var arr=[];
+//
+//    canvas.onmousedown=function(e){
+//        var cobj.beginPath();
+////        cobj.moveTo(e.offsetX,e.offsetX);
+////        cobj.lineTo(e.clientX,e.clientY);
+////        cobj.closePath();
+//        canvas.onmousemove=function(e){
+//
+////            cobj.moveTo(e.clientX,e.clientY);
+//            cobj.lineTo(e.offsetX,e.offsetY);
+////            cobj.clearRect(0,0,e.clientX,e.clientY);
+//            cobj.stroke();
+////            cobj.closePath();
+//        }
+//    }
+//    document.onmouseup=function(e){
+//       arr.push(cobj.getImageData(0,0,canvas.width(),canvas.height()))
+//        for(var i=0;i<arr.length;i++){
+//
+//        }
+//    }
+//    var btn=document.getElementsByTagName('button')[0]
+//    btn
+//};
+
+</script>
+<body>
+<canvas width="600" height="600"></canvas>
+<button>按钮</button>
+</body>
+</html>
